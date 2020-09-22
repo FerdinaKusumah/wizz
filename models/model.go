@@ -37,16 +37,16 @@ var SceneModel = map[int64]string{
 }
 
 type ParamPayload struct {
-	State     bool  `json:"state"`
-	WarmWhite int64 `json:"w,omitempty"`       // value > 0 < 256
-	ColdWhite int64 `json:"c,omitempty"`       // value > 0 < 256
-	Speed     int64 `json:"speed,omitempty"`   // value > 0 < 101
-	SceneId   int64 `json:"sceneId,omitempty"` // SceneModel
-	R         int64 `json:"r,omitempty"`
-	G         int64 `json:"g,omitempty"`
-	B         int64 `json:"b,omitempty"`
-	Dimming   int64 `json:"dimming,omitempty"`
-	ColorTemp int64 `json:"temp,omitempty"`
+	State     bool    `json:"state"`
+	WarmWhite float64 `json:"w,omitempty"`       // value > 0 < 256
+	ColdWhite float64 `json:"c,omitempty"`       // value > 0 < 256
+	Speed     int64   `json:"speed,omitempty"`   // value > 0 < 101
+	SceneId   int64   `json:"sceneId,omitempty"` // SceneModel
+	R         float64 `json:"r,omitempty"`
+	G         float64 `json:"g,omitempty"`
+	B         float64 `json:"b,omitempty"`
+	Dimming   int64   `json:"dimming,omitempty"`
+	ColorTemp float64 `json:"temp,omitempty"`
 }
 
 type ResultPayload struct {
