@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"github.com/FerdinaKusumah/phillips/wizz/models"
+	"github.com/FerdinaKusumah/wizz/models"
 	"log"
 	"net"
 	"strings"

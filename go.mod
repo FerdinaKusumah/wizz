@@ -1,3 +1,3 @@
-module github.com/FerdinaKusumah/phillips/wizz
+module github.com/FerdinaKusumah/wizz
 
 go 1.13
