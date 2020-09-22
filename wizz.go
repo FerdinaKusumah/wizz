@@ -1,4 +1,4 @@
-package main
+package wizz
 
 import (
 	"encoding/json"
