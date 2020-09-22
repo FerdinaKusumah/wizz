@@ -8,6 +8,7 @@ import (
 	"log"
 	"net"
 	"strings"
+	"time"
 )
 
 const Port = "38899"
@@ -21,12 +22,12 @@ func SendUdpMessage(host string, message *models.RequestPayload) (*models.Respon
 		conn            = new(net.UDPConn)
 		payload         []byte
 	)
+	time.Sleep(time.Second * 1)
 	// doing connection to UDP
 	if remoteAddr, err = net.ResolveUDPAddr("udp", fmt.Sprintf(`%s:%s`, host, Port)); err != nil {
 		log.Fatalf(`Unable to resolve to udp: %s`, err)
 		return nil, err
 	}
-
 	if conn, err = net.DialUDP("udp", nil, remoteAddr); err != nil {
 		log.Fatalf(`Unable to dial up to udp: %s`, err)
 		return nil, err
