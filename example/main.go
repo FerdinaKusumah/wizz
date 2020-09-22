@@ -3,7 +3,7 @@ package example
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/FerdinaKusumah/wizz/handlers"
+	"github.com/FerdinaKusumah/wizz/wizz"
 	"github.com/FerdinaKusumah/wizz/models"
 	"log"
 )
@@ -16,7 +16,7 @@ func example() {
 		err      error
 	)
 	//--------- Example Get Bulb Config -----------
-	if response, err = handlers.GetConfig(bulbIp); err != nil {
+	if response, err = wizz.GetConfig(bulbIp); err != nil {
 		log.Fatalf(`Unable to read response: %s`, err)
 	}
 	if result, err = json.Marshal(response); err != nil {
@@ -25,7 +25,7 @@ func example() {
 	fmt.Println(string(result))
 
 	// --------- Example Turn Off light -----------
-	//if response, err = handlers.TurnOffLight(bulbIp); err != nil {
+	//if response, err = wizz.TurnOffLight(bulbIp); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
@@ -34,7 +34,7 @@ func example() {
 	//fmt.Println(string(result))
 
 	// --------- Example Turn On light -----------
-	//if response, err = handlers.TurnOnLight(bulbIp); err != nil {
+	//if response, err = wizz.TurnOnLight(bulbIp); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
@@ -43,7 +43,7 @@ func example() {
 	//fmt.Println(string(result))
 
 	// --------- Example Set Brightness -----------
-	//if response, err = handlers.SetBrightness(bulbIp, 255); err != nil {
+	//if response, err = wizz.SetBrightness(bulbIp, 255); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
@@ -52,7 +52,7 @@ func example() {
 	//fmt.Println(string(result))
 
 	// --------- Example Set Color Temperature -----------
-	//if response, err = handlers.SetColorTemp(bulbIp, 3000); err != nil {
+	//if response, err = wizz.SetColorTemp(bulbIp, 3000); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
@@ -61,7 +61,7 @@ func example() {
 	//fmt.Println(string(result))
 
 	// --------- Example Set RGB Color -----------
-	//if response, err = handlers.SetColorRGB(bulbIp, 153, 153, 255); err != nil {
+	//if response, err = wizz.SetColorRGB(bulbIp, 153, 153, 255); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
@@ -70,7 +70,7 @@ func example() {
 	//fmt.Println(string(result))
 
 	// --------- Example Set Scene Color -----------
-	//if response, err = handlers.SetColorScene(bulbIp, 12); err != nil {
+	//if response, err = wizz.SetColorScene(bulbIp, 12); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
@@ -79,7 +79,7 @@ func example() {
 	//fmt.Println(string(result))
 
 	// --------- Example Set Warm White -----------
-	//if response, err = handlers.SetColorWarmWhite(bulbIp, 12); err != nil {
+	//if response, err = wizz.SetColorWarmWhite(bulbIp, 12); err != nil {
 	//	log.Fatalf(`Unable to read response: %s`, err)
 	//}
 	//if result, err = json.Marshal(response); err != nil {
