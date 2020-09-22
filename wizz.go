@@ -107,7 +107,7 @@ func GetState(bulbIp string) (*models.ResponsePayload, error) {
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -123,7 +123,7 @@ func GetConfig(bulbIp string) (*models.ResponsePayload, error) {
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -143,7 +143,7 @@ func TurnOnLight(bulbIp string) (*models.ResponsePayload, error) {
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -163,7 +163,7 @@ func TurnOffLight(bulbIp string) (*models.ResponsePayload, error) {
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -193,7 +193,7 @@ func SetColorTemp(bulbIp string, value float64) (*models.ResponsePayload, error)
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -219,7 +219,7 @@ func SetBrightness(bulbIp string, value float64) (*models.ResponsePayload, error
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -253,7 +253,7 @@ func SetColorRGB(bulbIp string, r, g, b float64) (*models.ResponsePayload, error
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -278,7 +278,7 @@ func SetColorScene(bulbIp string, sceneId int64) (*models.ResponsePayload, error
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -308,7 +308,7 @@ func SetColorWarmWhite(bulbIp string, value float64) (*models.ResponsePayload, e
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
 
@@ -338,6 +338,6 @@ func SetColorColdWhite(bulbIp string, value float64) (*models.ResponsePayload, e
 		log.Fatalf(`Unable to send message to udp: %s`, err)
 		return nil, err
 	}
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 1)
 	return response, nil
 }
