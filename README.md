@@ -1,6 +1,8 @@
 # wizz
 Phillips Wizz Local Connection, see main.go for detail example.
 
+Install package ``go get github.com/FerdinaKusumah/wizz``
+
 ## Available methods
 1. `getState` get current state bulb
 2. `getConfig` get current config
@@ -14,3 +16,43 @@ Phillips Wizz Local Connection, see main.go for detail example.
 10. `setColorColdWhite` set color cold light bulb
 
 Reference project from [https://github.com/sbidy/wiz_light](https://github.com/sbidy/wiz_light)
+
+## Example
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	phillipWhizz "github.com/FerdinaKusumah/wizz"
+	responseModel "github.com/FerdinaKusumah/wizz/models"
+	"log"
+)
+
+func main() {
+	var (
+		bulbIp   = "192.168.1.10"
+		response = new(responseModel.ResponsePayload)
+		result   []byte
+		err      error
+	)
+	//--------- Example Get Bulb Config -----------
+	if response, err = phillipWhizz.GetConfig(bulbIp); err != nil {
+		log.Fatalf(`Unable to read response: %s`, err)
+	}
+	if result, err = json.Marshal(response); err != nil {
+		log.Fatalf(`Unable to convert to json string: %s`, err)
+	}
+	fmt.Println(string(result))
+
+	// --------- Example Turn Off light -----------
+	if response, err = phillipWhizz.TurnOffLight(bulbIp); err != nil {
+		log.Fatalf(`Unable to read response: %s`, err)
+	}
+	if result, err = json.Marshal(response); err != nil {
+		log.Fatalf(`Unable to convert to json string: %s`, err)
+	}
+	fmt.Println(string(result))
+	...
+}
+```
