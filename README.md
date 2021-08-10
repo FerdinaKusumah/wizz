@@ -1,7 +1,7 @@
 # wizz
 Phillips Wizz Local Connection, see main.go for detail example.
 
-Install package ``go get github.com/FerdinaKusumah/wizz``
+Install package ``go get github.com/narutoxxx/wizz``
 
 ## Available methods
 1. `getState` get current state bulb
@@ -24,8 +24,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	phillipWhizz "github.com/FerdinaKusumah/wizz"
-	responseModel "github.com/FerdinaKusumah/wizz/models"
+	phillipWhizz "github.com/narutoxxx/wizz"
+	responseModel "github.com/narutoxxx/wizz/models"
 	"log"
 )
 
